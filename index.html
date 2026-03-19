@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Answer the Question 👀</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6fb;
+      text-align: center;
+      padding: 50px;
+    }
+    .box {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+    input {
+      padding: 10px;
+      width: 80%;
+      margin-top: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      background: #4CAF50;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box" id="questionBox">
+  <h2>Answer this 😏</h2>
+  <p>What did I say I would give you in school a lot of times and delayed each time?</p>
+  
+  <input type="text" id="answer" placeholder="Type your answer...">
+  <br>
+  <button onclick="checkAnswer()">Submit</button>
+</div>
+
+<div class="box hidden" id="resultBox">
+  <h2>🎉 You got it</h2>
+  <p>
+    Bro I have 800 robux 💀<br><br>
+    idk your usernames so you guys should ask me for something:<br><br>
+    👉 2 items below 400 robux<br>
+    OR<br>
+    👉 1 item above 400 robux<br><br>
+    BUT only for today 😤<br>
+    If you don’t reply, I will not give 😈
+  </p>
+</div>
+
+<script>
+function checkAnswer() {
+  let input = document.getElementById("answer").value.toLowerCase();
+
+  // check if answer contains "bud" or "soso"
+  if (input.includes("bud") || input.includes("soso")) {
+    document.getElementById("questionBox").classList.add("hidden");
+    document.getElementById("resultBox").classList.remove("hidden");
+  } else {
+    alert("Wrong answer. Think harder bro 😭");
+  }
+}
+</script>
+
+</body>
+</html>
